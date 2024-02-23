@@ -155,7 +155,7 @@ tsParticles.load({
         warp: false,
       },
       number: {
-        density: { enable: true, width: 1920, height: 1080 },
+        density: { enable: true, density_auto: true, },
         limit: { mode: "delete", value: 0 },
         value: 30,
       },
@@ -460,7 +460,7 @@ tsParticles.load({
         warp: false,
       },
       number: {
-        density: { enable: true, width: 1920, height: 1080 },
+        density: { enable: true, density_auto: true,},
         limit: { mode: "delete", value: 0 },
         value: 5,
       },
