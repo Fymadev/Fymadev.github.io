@@ -136,7 +136,7 @@ tsParticles.load({
         distance: {},
         direction: "none",
         drift: 0,
-        enable: true,
+        enable: false,
         gravity: {
           acceleration: 9.81,
           enable: false,
@@ -155,8 +155,8 @@ tsParticles.load({
         warp: false,
       },
       number: {
-        density: { enable: false, density_auto: true, },
-        limit: { mode: "delete", value: 20 },
+        density: { enable: true, density_auto: false, width: window.innerWidth * 1.5, height: window.innerHeight * 1.5 },
+        limit: { mode: "delete", value: 0 },
         value: 20,
       },
       opacity: {
@@ -184,17 +184,17 @@ tsParticles.load({
         type: "image",
         options: {
           image: [
-            /* {
+            {
               src: "images/mob/Cruce.svg",
               width: 30,
               height: 30,
               density: 5,
-            }, */
+            },
             {
               src: "images/mob/CruceMulti.svg",
               width: 30,
               height: 30,
-              /* density: 3, */
+              density: 3,
             },
           ],
         },
@@ -250,7 +250,7 @@ tsParticles.load({
       },
       rotate: {
         value: 0,
-        animation: { enable: true, speed: 3, decay: 0, sync: false },
+        animation: { enable: false, speed: 3, decay: 0, sync: false },
         direction: "clockwise",
         path: false,
       },
@@ -441,7 +441,7 @@ tsParticles.load({
         distance: {},
         direction: "none",
         drift: 0,
-        enable: true,
+        enable: false,
         gravity: {
           acceleration: 9.81,
           enable: false,
@@ -460,8 +460,8 @@ tsParticles.load({
         warp: false,
       },
       number: {
-        density: { enable: false, density_auto: true, },
-        limit: { mode: "delete", value: 10 },
+        density: { enable: true, density_auto: false, width: window.innerWidth * 1.5, height: window.innerHeight * 1.5 },
+        limit: { mode: "delete", value: 0 },
         value: 10,
       },
       opacity: {
@@ -493,19 +493,19 @@ tsParticles.load({
               src: "images/mob/printB.svg",
               width: 10,
               height: 10,
-              /* density: 2, */
+              density: 2,
             },
-           /*  {
+            {
               src: "images/mob/printBk.svg",
               width: 10,
               height: 10,
               density: 1
-            }, */
+            },
           ],
         },
       },
       size: {
-        value: { min: 60, max: 100 },
+        value: { min: 60, max: 120 },
         animation: {
           count: 0,
           enable: false,
@@ -555,7 +555,7 @@ tsParticles.load({
       },
       rotate: {
         value: 0,
-        animation: { enable: true, speed: 3, decay: 0, sync: false },
+        animation: { enable: false, speed: 3, decay: 0, sync: false },
         direction: "clockwise",
         path: false,
       },
