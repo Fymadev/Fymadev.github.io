@@ -184,17 +184,17 @@ tsParticles.load({
         type: "image",
         options: {
           image: [
-            {
+            /* {
               src: "images/mob/Cruce.svg",
               width: 30,
               height: 30,
               density: 5,
-            },
+            }, */
             {
               src: "images/mob/CruceMulti.svg",
               width: 30,
               height: 30,
-              density: 3,
+              /* density: 3, */
             },
           ],
         },
@@ -493,19 +493,19 @@ tsParticles.load({
               src: "images/mob/printB.svg",
               width: 10,
               height: 10,
-              density: 2,
+              /* density: 2, */
             },
-            {
+           /*  {
               src: "images/mob/printBk.svg",
               width: 10,
               height: 10,
               density: 1
-            },
+            }, */
           ],
         },
       },
       size: {
-        value: { min: 60, max: 120 },
+        value: { min: 60, max: 100 },
         animation: {
           count: 0,
           enable: false,
