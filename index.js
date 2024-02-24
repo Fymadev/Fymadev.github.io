@@ -302,7 +302,7 @@ tsParticles.load({
   },
 });
 
-
+/* 
 tsParticles.load({
   id: "tsparticlesBig",
   options: {
@@ -607,3 +607,4 @@ tsParticles.load({
   },
 });
 
+ */
