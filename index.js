@@ -19,7 +19,7 @@ tsParticles.load({
     defaultThemes: {},
     delay: 0,
     fullScreen: { enable: false, zIndex: 0 },
-    detectRetina: true,
+    detectRetina: false,
     duration: 0,
     fpsLimit: 120,
     interactivity: {
@@ -298,9 +298,11 @@ tsParticles.load({
     themes: [],
     zLayers: 100,
     name: "Basic",
-    motion: { disable: true, reduce: { factor: 4, value: true } },
+    motion: { disable: false, reduce: { factor: 4, value: true } },
   },
 });
+
+
 tsParticles.load({
   id: "tsparticlesBig",
   options: {
@@ -322,7 +324,7 @@ tsParticles.load({
     defaultThemes: {},
     delay: 0,
     fullScreen: { enable: false, zIndex: 0 },
-    detectRetina: true,
+    detectRetina: false,
     duration: 0,
     fpsLimit: 120,
     interactivity: {
@@ -601,6 +603,6 @@ tsParticles.load({
     themes: [],
     zLayers: 100,
     name: "Basic",
-    motion: { disable: true, reduce: { factor: 4, value: true } },
+    motion: { disable: false, reduce: { factor: 4, value: true } },
   },
 });
