@@ -491,14 +491,14 @@ tsParticles.load({
           image: [
             {
               src: "images/printB.svg",
-              width: 100,
-              height: 100,
+              width: 10,
+              height: 10,
               density: 5,
             },
             {
               src: "images/printBk.svg",
-              width: 100,
-              height: 100,
+              width: 10,
+              height: 10,
               density: 4
             },
           ],
