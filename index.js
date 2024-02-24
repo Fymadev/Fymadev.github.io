@@ -32,7 +32,7 @@ tsParticles.load({
           mode: "repulse",
           parallax: { enable: false, force: 2, smooth: 10 },
         },
-        resize: { delay: 0.5, enable: true },
+        resize: { delay: 0.5, enable: false },
       },
       modes: {
         trail: { delay: 1, pauseOnStop: false, quantity: 1 },
@@ -51,7 +51,7 @@ tsParticles.load({
           distance: 100,
           links: { blink: false, consent: false, opacity: 1 },
         },
-        push: { default: true, groups: [], quantity: 4 },
+        push: { default: false, groups: [], quantity: 4 },
         remove: { quantity: 2 },
         repulse: {
           distance: 200,
@@ -92,14 +92,14 @@ tsParticles.load({
         enable: false,
         maxSpeed: 50,
         mode: "bounce",
-        overlap: { enable: true, retries: 0 },
+        overlap: { enable: false, retries: 0 },
       },
       color: {
         value: "#ff0000",
         animation: {
           h: {
             count: 0,
-            enable: true,
+            enable: false,
             speed: 20,
             decay: 0,
             delay: 0,
@@ -126,7 +126,7 @@ tsParticles.load({
           },
         },
       },
-      effect: { close: true, fill: true, options: {}, type: [] },
+      effect: { close: false, fill: false, options: {}, type: [] },
       groups: {},
       move: {
         angle: { offset: 0, value: 90 },
@@ -298,11 +298,9 @@ tsParticles.load({
     themes: [],
     zLayers: 100,
     name: "Basic",
-    motion: { disable: false, reduce: { factor: 4, value: true } },
+    motion: { disable: true, reduce: { factor: 4, value: true } },
   },
 });
-
-/* 
 tsParticles.load({
   id: "tsparticlesBig",
   options: {
@@ -317,7 +315,7 @@ tsParticles.load({
     },
     backgroundMask: {
       composite: "destination-out",
-      cover: { color: { value: "#fff" }, opacity: 0 },
+      cover: { color: { value: "#fff" }, opacity: 1 },
       enable: false,
     },
     clear: true,
@@ -337,7 +335,7 @@ tsParticles.load({
           mode: "repulse",
           parallax: { enable: false, force: 2, smooth: 10 },
         },
-        resize: { delay: 0.5, enable: true },
+        resize: { delay: 0.5, enable: false },
       },
       modes: {
         trail: { delay: 1, pauseOnStop: false, quantity: 1 },
@@ -356,7 +354,7 @@ tsParticles.load({
           distance: 100,
           links: { blink: false, consent: false, opacity: 1 },
         },
-        push: { default: true, groups: [], quantity: 4 },
+        push: { default: false, groups: [], quantity: 4 },
         remove: { quantity: 2 },
         repulse: {
           distance: 200,
@@ -397,14 +395,14 @@ tsParticles.load({
         enable: false,
         maxSpeed: 50,
         mode: "bounce",
-        overlap: { enable: true, retries: 0 },
+        overlap: { enable: false, retries: 0 },
       },
       color: {
         value: "#ff0000",
         animation: {
           h: {
             count: 0,
-            enable: true,
+            enable: false,
             speed: 20,
             decay: 0,
             delay: 0,
@@ -431,7 +429,7 @@ tsParticles.load({
           },
         },
       },
-      effect: { close: true, fill: true, options: {}, type: [] },
+      effect: { close: false, fill: false, options: {}, type: [] },
       groups: {},
       move: {
         angle: { offset: 0, value: 90 },
@@ -460,9 +458,9 @@ tsParticles.load({
         warp: false,
       },
       number: {
-        density: { enable: false, density_auto: true,},
+        density: { enable: false, density_auto: true, },
         limit: { mode: "delete", value: 0 },
-        value: 5,
+        value: 30,
       },
       opacity: {
         value: 1,
@@ -603,8 +601,6 @@ tsParticles.load({
     themes: [],
     zLayers: 100,
     name: "Basic",
-    motion: { disable: false, reduce: { factor: 4, value: true } },
+    motion: { disable: true, reduce: { factor: 4, value: true } },
   },
 });
-
- */
