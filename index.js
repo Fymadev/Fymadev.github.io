@@ -188,13 +188,13 @@ tsParticles.load({
               src: "images/mob/Cruce.svg",
               width: 30,
               height: 30,
-              density: 5,
+              density: 50,
             },
             {
               src: "images/mob/CruceMulti.svg",
               width: 30,
               height: 30,
-              density: 3,
+              density: 30,
             },
           ],
         },
@@ -292,7 +292,18 @@ tsParticles.load({
     },
     pauseOnBlur: true,
     pauseOnOutsideViewport: true,
-    responsive: [],
+    responsive: [
+      {
+        maxWidth: 576,
+        options: {
+          number: {
+            density: { enable: true, density_auto: true,},
+            limit: { mode: "delete", value: 0 },
+            value: 20,
+          },
+        }
+      }
+    ],
     smooth: false,
     style: {},
     themes: [],
@@ -460,7 +471,7 @@ tsParticles.load({
         warp: false,
       },
       number: {
-        density: { enable: true, density_auto: false, width: window.innerWidth * 1.5, height: window.innerHeight * 1.5 },
+        density: { enable: true, density_auto: false, width: window.innerWidth * 1.8, height: window.innerHeight * 1.8},
         limit: { mode: "delete", value: 0 },
         value: 10,
       },
@@ -493,7 +504,7 @@ tsParticles.load({
               src: "images/mob/printB.svg",
               width: 10,
               height: 10,
-              density: 2,
+              density: 0,
             },
             {
               src: "images/mob/printBk.svg",
@@ -505,7 +516,7 @@ tsParticles.load({
         },
       },
       size: {
-        value: { min: 60, max: 120 },
+        value: { min: 80, max: 120 },
         animation: {
           count: 0,
           enable: false,
@@ -597,7 +608,51 @@ tsParticles.load({
     },
     pauseOnBlur: true,
     pauseOnOutsideViewport: true,
-    responsive: [],
+    responsive: [
+      {
+        maxWidth: 576,
+        options: {
+          number: {
+            density: { enable: true, density_auto: false,},
+            limit: { mode: "delete", value: 10 },
+            value: 10,
+          },
+          shape: {
+            type: "image",
+            options: {
+              image: [
+                {
+                  src: "images/mob/printB.svg",
+                  width: 10,
+                  height: 10,
+                  density: 0,
+                },
+                {
+                  src: "images/mob/printBk.svg",
+                  width: 10,
+                  height: 10,
+                  density: 1
+                },
+              ],
+            },
+          },
+          size: {
+            value: { min: 60, max: 120 },
+            animation: {
+              count: 0,
+              enable: false,
+              speed: 5,
+              decay: 0,
+              delay: 0,
+              sync: false,
+              mode: "auto",
+              startValue: "random",
+              destroy: "none",
+            },
+          },
+        }
+      }
+    ],
     smooth: false,
     style: {},
     themes: [],
