@@ -156,7 +156,7 @@ tsParticles.load({
       },
       number: {
         density: { enable: false, density_auto: true, },
-        limit: { mode: "delete", value: 0 },
+        limit: { mode: "delete", value: 20 },
         value: 20,
       },
       opacity: {
@@ -461,7 +461,7 @@ tsParticles.load({
       },
       number: {
         density: { enable: false, density_auto: true, },
-        limit: { mode: "delete", value: 0 },
+        limit: { mode: "delete", value: 10 },
         value: 10,
       },
       opacity: {
