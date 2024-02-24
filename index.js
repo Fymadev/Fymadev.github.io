@@ -157,7 +157,7 @@ tsParticles.load({
       number: {
         density: { enable: false, density_auto: true, },
         limit: { mode: "delete", value: 0 },
-        value: 30,
+        value: 20,
       },
       opacity: {
         value: 1,
@@ -188,19 +188,19 @@ tsParticles.load({
               src: "images/Cruce.svg",
               width: 30,
               height: 30,
-              density: 10,
+              density: 5,
             },
             {
               src: "images/CruceMulti.svg",
               width: 30,
               height: 30,
-              density: 7,
+              density: 3,
             },
           ],
         },
       },
       size: {
-        value: { min: 10, max: 30 },
+        value: { min: 10, max: 20 },
         animation: {
           count: 0,
           enable: false,
@@ -462,7 +462,7 @@ tsParticles.load({
       number: {
         density: { enable: false, density_auto: true, },
         limit: { mode: "delete", value: 0 },
-        value: 30,
+        value: 10,
       },
       opacity: {
         value: 1,
@@ -493,13 +493,13 @@ tsParticles.load({
               src: "images/printB.svg",
               width: 10,
               height: 10,
-              density: 5,
+              density: 2,
             },
             {
               src: "images/printBk.svg",
               width: 10,
               height: 10,
-              density: 4
+              density: 1
             },
           ],
         },
