@@ -185,13 +185,13 @@ tsParticles.load({
         options: {
           image: [
             {
-              src: "images/Cruce.svg",
+              src: "images/mob/Cruce.svg",
               width: 30,
               height: 30,
               density: 5,
             },
             {
-              src: "images/CruceMulti.svg",
+              src: "images/mob/CruceMulti.svg",
               width: 30,
               height: 30,
               density: 3,
@@ -490,13 +490,13 @@ tsParticles.load({
         options: {
           image: [
             {
-              src: "images/printB.svg",
+              src: "images/mob/printB.svg",
               width: 10,
               height: 10,
               density: 2,
             },
             {
-              src: "images/printBk.svg",
+              src: "images/mob/printBk.svg",
               width: 10,
               height: 10,
               density: 1
