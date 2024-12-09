@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="servAnim.css">
+    <link rel="stylesheet" href="servStyle.css">
+    <link rel="icon" type="image/png" href="../favicon.svg">
+    <title>Iasan Service - Nos Services</title>
+</head>
+<body>
+    <nav class="fix-nav" style="display: none;">
+        <div class="nav-logo">
+            <a class="page-logo" href="../index.html"></a>
+        </div>
+        <div class="nav-content">
+            <div class="nav-body">
+                <div class="nav-el-cont">
+                    <a class="nav-el" href="../index.html">Accueil</a>
+                </div>
+                <div class="nav-el-cont">
+                    <a class="nav-el active-page" href="noservices.html">Nos Services</a>
+                </div>
+                <div class="nav-el-cont">
+                    <a class="nav-el" href="../apropos/apropos.html">A Propos</a>
+                </div>
+                <div class="nav-el-cont">
+                    <a class="nav-el contact button">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-container contact-closed">
+        <div class="contact-content">
+            <div class="contact-header">
+                <div class="contact-title">Nous contacter</div>
+                <div class="contact-close_butt">X</div>
+            </div>
+            <div class="contact-line"></div>
+            <div class="contact-body">
+                <div class="contact-info">
+                    <div class="info-text">Appelez-nous ou remplissez le formulaire ci-dessous et nous vous contacterons.</div>
+                    <div class="info-contact_dates">
+                        <div class="contact_dates">
+                            <div class="dates-icon"></div>
+                            <div class="dates-text">+33 (0) 6 16 01 06 65</div>
+                        </div>
+                        <div class="contact_dates">
+                            <div class="dates-icon"></div>
+                            <div class="dates-text">iasan10@icloud.com</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="../send.php" method="post">
+                    <div class="form-content">
+                        <div class="inputs">
+                            <input type="text" class="contact-form_name input" name="input-name" placeholder="Votre nom" required>
+                            <input type="tel" class="contact-form_tel input" name="input-tel" placeholder="Votre numéro de téléphone" required>
+                            <input type="email" class="contact-form_email input" name="input-email" placeholder="Votre email" required>
+                        </div>
+                        <textarea type="text" class="contact-form_message input" name="input-message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <input type="submit" value="Envoyer" class="button submit-button">
+                </form>
+                <div class="thankyou-cont">
+                    <div class="thankyou-close_butt">X</div>
+                    <div class="thankyou-text">Nous vous remercions de nous avoir choisis</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-burger_menu header" style="display: none;">
+        <div class="logo-cont">
+            <a class="page-logo" href="../index.html"></a>
+        </div>
+        <div class="burger-container">
+          <div id="burger">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
+          </div>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="../index.html">Accueil</a>
+            </li>
+            <li class="menu-item">
+                <a href="noservices.html">Nos Services</a>
+            </li>
+            <li class="menu-item">
+                <a href="../apropos/apropos.html">A propos</a>
+            </li>
+            <li class="menu-item">
+                <a href="../mentions/mentions.html">Mentions légales</a>
+            </li>
+            <li class="menu-item">
+                <a class="contact">Contact Nous</a>
+            </li>
+            <li class="menu-item">
+                <a>iasan10@icloud.com</a>
+            </li>
+            <li class="menu-item">
+                <a href="tel:+330616010665">+33 (0) 6 16 01 06 65</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container mainpage-bgfoto">
+        <div class="main">
+            <div class="main-logo">
+                <div class="mainpage_logo"></div>
+            </div>
+            <div class="main-text">
+                <h4 class="page-title">Nos Services</h4>
+                <h6 class="page-subtitle main-subtitle"><a class="main_subtitle-prev_site" href="../index.html">Iasan Service</a> > Nos Services</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page2">
+        <div class="page2-main">
+            <h4 class="page-title title_page2">Des services variés et une expertise tout corps d'état</h4>
+            <h6 class="page-subtitle">Iasan Service est une entreprise générale du bâtiment</h6>
+        </div>
+        <div class="container2_cards">
+            <div class="page2-cards">
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/electric.svg"></img>
+                    <div class="card2-title">Electricité</div>
+                    <div class="card2-info">Nos électriciens s'occupent de la mise aux normes de vos installations électriques</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/Plomberie.svg"></img>
+                    <div class="card2-title">Plomberie</div>
+                    <div class="card2-info">Des plombiers compétents s'occupent d'opérations de rénovation lourdes</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/Cloisons.svg"></img>
+                    <div class="card2-title">Cloisons / Maçonnerie</div>
+                    <div class="card2-info">Une équipe de maçons expérimentés intervient du gros oeuvres aux finitions</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/Peinture.svg"></img>
+                    <div class="card2-title">Peinture</div>
+                    <div class="card2-info">Nos peintres vont sublimer vos murs au gré de vos envies</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/parquet.svg"></img>
+                    <div class="card2-title">Parquet / Carrelage</div>
+                    <div class="card2-info">Nos équipes se chargent de vos sols, quelque soit leur composition</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/manage.svg"></img>
+                    <div class="card2-title">Maîtrise d'Ouvrage</div>
+                    <div class="card2-info">Nous vous assistons dans la définition, le pilotage et l'exploitation de vos projets</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/control.svg"></img>
+                    <div class="card2-title">Maîtrise d'Oeuvre</div>
+                    <div class="card2-info">Nous vous accompagnons dans la conduite opérationnelle de vos projets</div>
+                </div>
+                <div class="p2-card_el">
+                    <img class="card2-icon" src="../images/icons/plan3d.svg"></img>
+                    <div class="card2-title">Plans 3D</div>
+                    <div class="card2-info">Nos architectes réalisent des plans 3D afin de vous aider à visualiser votre projet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page3">
+        <div class="page3-main">
+            <h6 class="page-subtitle">Nous faisons bien plus que vous accompagner.</h6>
+            <h4 class="page-title title_page3">Les valeurs au coeur des services que nous proposons</h4>
+        </div>
+        <div class="container3_cards">
+            <div class="page3-cards">
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="../images/icons/disponibilite.svg"></img>
+                    <div class="card3-title">Disponibilité</div>
+                    <div class="card3-info">Des experts mobilisés pour répondre à vos questions en temps et en heure</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="../images/icons/expertise.svg"></img>
+                    <div class="card3-title">Expertise</div>
+                    <div class="card3-info">Une équipe d’experts spécialisée dans chacune des étapes de votre projet</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="../images/icons/exigence.svg"></img>
+                    <div class="card3-title">Exigence</div>
+                    <div class="card3-info">Une qualité irréprochable à chaque étape de votre rénovation</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="../images/icons/faciliti.svg"></img>
+                    <div class="card3-title">Facilité</div>
+                    <div class="card3-info">Il n'a jamais été aussi simple de réaliser des travaux de qualité</div>
+                </div>
+            </div>
+            <img class="page3-image" src="../images/background/page3image.webp"></img>
+        </div>
+    </div>
+
+    <div class="container page4">
+        <div class="page-subtitle">En savoir plus sur <span class="page4-sub_compName">Iasan Service</span></div>
+        <div class="page-title title-page4">Vous souhaitez échangez avec un de nos experts?</div>
+        <div class="button contact">Contactez-nous</div>
+    </div>
+
+    <div class="container footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="links-site">
+                    <div class="links-cont">
+                        <a class="links_site-el" href="../index.html">Accueil</a>
+                        <a class="links_site-el" href="noservices.html">Nos Services</a>
+                    </div>
+                    <div class="links-cont">
+                        <a class="links_site-el" href="../apropos/apropos.html">A propos</a>
+                        <a class="links_site-el" href="../mentions/mentions.html">Mentions légales</a>
+                    </div>
+                    <div class="links-cont">
+                        <a class="links_site-el contact">Contact</a>
+                    </div>
+                </div>
+                <div class="links-social">
+                    <a class="links_social-el" href="https:/facebook.com" target="_blank">
+                        <img src="../images/socials/facebook.svg" width="60" height="60" alt="Facebook" class="social_img">
+                    </a>
+                    <a class="links_social-el" href="https:/whatsapp.com" target="_blank">
+                        <img src="../images/socials/whatsapp.svg" width="60" height="60" alt="Whatsapp" class="social_img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="footer-rights">Iasan Service SAS. Tous droits réservés. <br> Créé par DOTTNET.co</div>
+        </div>
+        <hr class="footer-line">
+    </div>
+
+    <script src="noservices.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/*Cards*/
+.card-open {
+    animation: openCard .4s 1 forwards;
+}
+
+.card-close {
+    animation: closeCard .4s 1 forwards;
+}
+
+@keyframes openCard {
+    0%{
+        margin-bottom: -100px;
+    }
+    100%{
+        margin-bottom: 100%;
+    }
+}
+
+@keyframes closeCard {
+    0%{
+        margin-bottom: 100%;
+    }
+    100%{
+        margin-bottom: -100px;
+    }
+}
+  
+

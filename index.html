@@ -1,16 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iasan Service est une entreprise de construction spécialisée dans la conception et l'exécution de travaux de haute qualité. Nous offrons des services de construction résidentielle et commerciale, des rénovations, des extensions et plus encore. Contactez-nous pour une consultation gratuite.">
+    <meta name="keywords" content="Iasan Service, construction, construction résidentielle, construction commerciale, rénovations, extensions, entreprise, lieu, construction, france">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <title>Iasan Service - Accueil</title>
 </head>
 <body>
-  <div id="tsparticles"></div>
-  <div id="tsparticlesBig"></div>
+    <nav class="fix-nav" style="display: none;">
+        <div class="nav-logo">
+            <a class="page-logo" href="index.html"></a>
+        </div>
+        <div class="nav-content">
+            <div class="nav-body">
+                <div class="nav-el-cont">
+                    <a class="nav-el active-page" href="index.html">Accueil</a>
+                </div>
+                <div class="nav-el-cont">
+                    <a class="nav-el" href="noservices/noservices.html">Nos Services</a>
+                </div>
+                <div class="nav-el-cont">
+                    <a class="nav-el" href="apropos/apropos.html">A Propos</a>
+                </div>
+                <div class="nav-el-cont">
+                    <a class="nav-el contact button">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <script src="index.js"></script>
+    <div class="site-burger_menu header" style="display: none;">
+        <div class="logo-cont">
+            <a class="page-logo" href="index.html"></a>
+        </div>
+        <div class="burger-container">
+          <div id="burger">
+                <div class="bar topBar"></div>
+                <div class="bar btmBar"></div>
+          </div>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="index.html">Accueil</a>
+            </li>
+            <li class="menu-item">
+                <a href="noservices/noservices.html">Nos Services</a>
+            </li>
+            <li class="menu-item">
+                <a href="apropos/apropos.html">A propos</a>
+            </li>
+            <li class="menu-item">
+                <a href="mentions/mentions.html">Mentions légales</a>
+            </li>
+            <li class="menu-item">
+                <a class="contact">Contact Nous</a>
+            </li>
+            <li class="menu-item">
+                <a>iasan10@icloud.com</a>
+            </li>
+            <li class="menu-item">
+                <a href="tel:+330616010665">+33 (0) 6 16 01 06 65</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contact-container contact-closed">
+        <div class="contact-content">
+            <div class="contact-header">
+                <div class="contact-title">Nous contacter</div>
+                <div class="contact-close_butt">X</div>
+            </div>
+            <div class="contact-line"></div>
+            <div class="contact-body">
+                <div class="contact-info">
+                    <div class="info-text">Appelez-nous ou remplissez le formulaire ci-dessous et nous vous contacterons.</div>
+                    <div class="info-contact_dates">
+                        <div class="contact_dates">
+                            <div class="dates-icon"></div>
+                            <div class="dates-text">+33 (0) 6 16 01 06 65</div>
+                        </div>
+                        <div class="contact_dates">
+                            <div class="dates-icon"></div>
+                            <div class="dates-text">iasan10@icloud.com</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="send.php" method="post">
+                    <div class="form-content">
+                        <div class="inputs">
+                            <input type="text" class="contact-form_name input" name="input-name" placeholder="Votre nom" required>
+                            <input type="tel" class="contact-form_tel input" name="input-tel" placeholder="Votre numéro de téléphone" required>
+                            <input type="email" class="contact-form_email input" name="input-email" placeholder="Votre email" required>
+                        </div>
+                        <textarea type="text" class="contact-form_message input" name="input-message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <input type="submit" value="Envoyer" class="button submit-button">
+                </form>
+                <div class="thankyou-cont">
+                    <div class="thankyou-close_butt">X</div>
+                    <div class="thankyou-text">Nous vous remercions de nous avoir choisis</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mainpage-bgfoto">
+        <div class="main">
+            <div class="main-logo">
+                <div class="mainpage_logo"></div>
+            </div>
+            <div class="main-text">
+                <h4 class="page-title">Vous travaux, en toute serenite.</h4>
+                <h6 class="page-subtitle">Entreprise tout corps d'état spécialisée en rénovation, <br> d'appartements, de maisons individuelles ou de bureaux.</h6>
+            </div>
+            <div class="main-button">
+                <a class="button contact">
+                    <h5 class="butt_text">Contactez-nous</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page2">
+        <div class="page2-main">
+            <h3 class="page-title">Vous souhaitez rénover <br>un bien sur Paris ?</h3>
+            <h5 class="page-subtitle">Iasan Service est une équipe de passionnés de la rénovation <br> disposant de plusieurs années d'expérience !</h5>
+        </div>
+        <div class="page2-cards">
+            <div class="page2-card_cont">
+                <div class="card-el">
+                    <div class="card_el-icon"></div>
+                    <div class="card_el-content">
+                        <h4 class="card_title">Délais respectés</h4>
+                        <p class="card_info card-close">Nos équipes ont à coeur de respecter les délais convenus ensemble.</p>
+                    </div>
+                </div>
+                <div class="card-el">
+                    <div class="card_el-icon"></div>
+                    <div class="card_el-content">
+                        <h4 class="card_title">Qualité supérieure</h4>
+                        <p class="card_info card-close">Notre entreprise vous offre une qualité de travail supérieure</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page2-card_cont">
+                <div class="card-el">
+                    <div class="card_el-icon"></div>
+                    <div class="card_el-content">
+                        <h4 class="card_title">Budgets Maîtrisés</h4>
+                        <p class="card_info card-close">Nous veillons à optimiser les coûts afin de garantir le meilleur prix.</p>                        
+                    </div>
+                </div>
+                <div class="card-el">
+                    <div class="card_el-icon"></div>
+                    <div class="card_el-content">
+                        <h4 class="card_title">Garantie 10 ans.</h4>
+                        <p class="card_info card-close">Nos travaux sont couverts par une assurance construction décennale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page2-info">
+            <h4 class="info_title">Des projets sur-mesure, adaptés à votre budget.</h4>
+            <h6 class="info-subtitle">Iasan Service et son expertise vous aide à réaliser <br> le projet de vos rêves quelque soit votre budget.</h6>
+        </div>
+        <div class="page2-ranges">
+            <div class="ranges-container">
+                <div class="range-cont">
+                    <div class="ranges-el">
+                        <div class="range-title page-subtitle">Disponibilité</div>
+                        <canvas class="page2-ranges_circle circle_canvas" width="200" height="200"></canvas>
+                    </div>
+                    <div class="ranges-el">
+                        <div class="range-title page-subtitle">Conseil</div>
+                        <canvas class="page2-ranges_circle circle_canvas" width="200" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="range-cont">
+                    <div class="ranges-el">
+                        <div class="range-title page-subtitle">Expertise</div>
+                        <canvas class="page2-ranges_circle circle_canvas" width="200" height="200"></canvas>
+                    </div>
+                    <div class="ranges-el">
+                        <div class="range-title page-subtitle">Satisfaction</div>
+                        <canvas class="page2-ranges_circle circle_canvas" width="200" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page3">
+        <div class="page3-main">
+            <h4 class="page-title title_page3">Une expertise tout corps d'état pour votre projet</h4>
+            <h6 class="page-subtitle">Nous vous accompagnons à chaque étape de vos travaux</h6>
+        </div>
+        <div class="container3_cards">
+            <div class="page3-cards">
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/electric.svg"></img>
+                    <div class="card3-title">Electricité</div>
+                    <div class="card3-info">Nos électriciens s'occupent de la mise aux normes de vos installations électriques</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/Plomberie.svg"></img>
+                    <div class="card3-title">Plomberie</div>
+                    <div class="card3-info">Des plombiers compétents s'occupent d'opérations de rénovation lourdes</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/Cloisons.svg"></img>
+                    <div class="card3-title">Cloisons / Maçonnerie</div>
+                    <div class="card3-info">Une équipe de maçons expérimentés intervient du gros oeuvres aux finitions</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/Peinture.svg"></img>
+                    <div class="card3-title">Peinture</div>
+                    <div class="card3-info">Nos peintres vont sublimer vos murs au gré de vos envies</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/parquet.svg"></img>
+                    <div class="card3-title">Parquet / Carrelage</div>
+                    <div class="card3-info">Nos équipes se chargent de vos sols, quelque soit leur composition</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/manage.svg"></img>
+                    <div class="card3-title">Maîtrise d'Ouvrage</div>
+                    <div class="card3-info">Nous vous assistons dans la définition, le pilotage et l'exploitation de vos projets</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/control.svg"></img>
+                    <div class="card3-title">Maîtrise d'Oeuvre</div>
+                    <div class="card3-info">Nous vous accompagnons dans la conduite opérationnelle de vos projets</div>
+                </div>
+                <div class="p3-card_el">
+                    <img class="card3-icon" src="images/icons/plan3d.svg"></img>
+                    <div class="card3-title">Plans 3D</div>
+                    <div class="card3-info">Nos architectes réalisent des plans 3D afin de vous aider à visualiser votre projet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page_ofert">
+        <div class="page4-content">
+            <h4 class="page-title title_page4">Nos équipes vous proposent un devis gratuit sous 24h !</h4>
+            <h6 class="page-subtitle">Contactez-nous pour échanger avec nos experts.</h6>
+            <div class="button contact">
+                <h5 class="butt_text">Contactez-nous</h5>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container page5">
+        <div class="page_clients">
+            <div class="page-title title-page5">Nos clients nous recommandent sans réserve</div>
+            <div class="clients">
+                <div class="messages">
+                    <div class="message-cont message-active" id="ms1">
+                        <div class="message-body">
+                            <div class="person-icon"></div>
+                            <div class="message-header">
+                                <div class="person-name">Andrei Mocanu</div>
+                                <div class="person-rating">
+                                    <div class="rating"></div>
+                                </div>
+                            </div>
+                            <div class="message-separator"></div>
+                            <div class="message-text">
+                                <div class="text-content">
+                                    Iasan Service m'a aidé à rénover ma résidence principale dans le 9e. L'équipe est très professionnelle, je les recommande vivement.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-cont desactive" id="ms2">
+                        <div class="message-body">
+                            <div class="person-icon"></div>
+                            <div class="message-header">
+                                <div class="person-name">Andrei Mocanu</div>
+                                <div class="person-rating">
+                                    <div class="rating"></div>
+                                </div>
+                            </div>
+                            <div class="message-separator"></div>
+                            <div class="message-text">
+                                <div class="text-content">
+                                    Iasan Service m'a aidé à rénover ma résidence principale dans le 9e. L'équipe est très professionnelle, je les recommande vivement.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-cont desactive" id="ms3">
+                        <div class="message-body">
+                            <div class="person-icon"></div>
+                            <div class="message-header">
+                                <div class="person-name">Andrei Mocanu</div>
+                                <div class="person-rating">
+                                    <div class="rating"></div>
+                                </div>
+                            </div>
+                            <div class="message-separator"></div>
+                            <div class="message-text">
+                                <div class="text-content">
+                                    Iasan Service m'a aidé à rénover ma résidence principale dans le 9e. L'équipe est très professionnelle, je les recommande vivement.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container page-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.092054089852!2d2.6543652158276982!3d48.5284145703862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa7f6996e3c7%3A0x85599ab746fc36f8!2s9%20Rue%20Damonville%2C%2077000%20Melun%2C%20France!5e0!3m2!1sfr!2s!4v1684396438847!5m2!1sfr!2s" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        <div class="map-info">
+            <div class="info-container">
+                <h3 class="map-info_title">Nos bureaux:</h3>
+                <ul class="info-bureaux">
+                    <li class="bur-info_el">
+                        <img class="info_el-icon" src="images/map/location.svg"></img>
+                        <div class="info_el-text">9, Rue Damonville, 77000 Melun, Paris</div>
+                    </li>
+                    <li class="bur-info_el">
+                        <img class="info_el-icon" src="images/map/tel.svg"></img>
+                        <div class="info_el-text">+33 (0) 6 16 01 06 65</div>
+                    </li>
+                    <li class="bur-info_el">
+                        <img class="info_el-icon" src="images/map/mail.svg"></img>
+                        <div class="info_el-text">iasan10@icloud.com</div>
+                    </li>
+                </ul>
+                <h3 class="map-info_title">Nos horaires:</h3>
+                <div class="info-horaire">
+                    <div class="info-cont_titles">
+                        <div class="cont_el-title">Lundi-Vendredi</div>
+                        <div class="cont_el-title">Samedi</div>
+                        <div class="cont_el-title">Dimanche</div>
+                    </div>
+                    <div class="info-cont_infos">
+                        <div class="cont_el-info">10:00 - 18:00</div>
+                        <div class="cont_el-info">Fermé</div>
+                        <div class="cont_el-info">Fermé</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="links-site">
+                    <div class="links-cont">
+                        <a class="links_site-el" href="index.html">Accueil</a>
+                        <a class="links_site-el" href="noservices/noservices.html">Nos Services</a>
+                    </div>
+                    <div class="links-cont">
+                        <a class="links_site-el" href="apropos/apropos.html">A propos</a>
+                        <a class="links_site-el" href="mentions/mentions.html">Mentions légales</a>
+                    </div>
+                    <div class="links-cont">
+                        <a class="links_site-el contact">Contact</a>
+                    </div>
+                </div>
+                <div class="links-social">
+                    <a class="links_social-el" href="https:/facebook.com" target="_blank">
+                        <img src="images/socials/facebook.svg" width="60" height="60" alt="Facebook" class="social_img">
+                    </a>
+                    <a class="links_social-el" href="https:/whatsapp.com" target="_blank">
+                        <img src="images/socials/whatsapp.svg" width="60" height="60" alt="Whatsapp" class="social_img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="footer-rights">Iasan Service SAS. Tous droits réservés. <br> Créé par DOTTNET.co</div>
+        </div>
+        <hr class="footer-line">
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

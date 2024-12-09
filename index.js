@@ -1,663 +1,280 @@
-tsParticles.load({
-  id: "tsparticles",
-  options: {
-    autoPlay: true,
-    background: {
-      color: { value: "#fff" },
-      image: "",
-      position: "",
-      repeat: "",
-      size: "",
-      opacity: 1,
-    },
-    backgroundMask: {
-      composite: "destination-out",
-      cover: { color: { value: "#fff" }, opacity: 1 },
-      enable: false,
-    },
-    clear: true,
-    defaultThemes: {},
-    delay: 0,
-    fullScreen: { enable: false, zIndex: 0 },
-    detectRetina: false,
-    duration: 0,
-    fpsLimit: 120,
-    interactivity: {
-      detectsOn: "window",
-      events: {
-        onClick: { enable: false, mode: "push" },
-        onDiv: { selectors: [], enable: false, mode: [], type: "circle" },
-        onHover: {
-          enable: false,
-          mode: "repulse",
-          parallax: { enable: false, force: 2, smooth: 10 },
-        },
-        resize: { delay: 0.5, enable: false },
-      },
-      modes: {
-        trail: { delay: 1, pauseOnStop: false, quantity: 1 },
-        attract: {
-          distance: 200,
-          duration: 0.4,
-          easing: "ease-out-quad",
-          factor: 1,
-          maxSpeed: 50,
-          speed: 1,
-        },
-        bounce: { distance: 200 },
-        bubble: { distance: 200, duration: 0.4, mix: false },
-        connect: { distance: 80, links: { opacity: 0.5 }, radius: 60 },
-        grab: {
-          distance: 100,
-          links: { blink: false, consent: false, opacity: 1 },
-        },
-        push: { default: false, groups: [], quantity: 4 },
-        remove: { quantity: 2 },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-          factor: 100,
-          speed: 1,
-          maxSpeed: 50,
-          easing: "ease-out-quad",
-          divs: {
-            distance: 200,
-            duration: 0.4,
-            factor: 100,
-            speed: 1,
-            maxSpeed: 50,
-            easing: "ease-out-quad",
-            selectors: [],
-          },
-        },
-        slow: { factor: 3, radius: 200 },
-        light: {
-          area: {
-            gradient: {
-              start: { value: "#ffffff" },
-              stop: { value: "#000000" },
-            },
-            radius: 1000,
-          },
-          shadow: { color: { value: "#000000" }, length: 2000 },
-        },
-      },
-    },
-    manualParticles: [],
-    particles: {
-      bounce: { horizontal: { value: 1 }, vertical: { value: 1 } },
-      collisions: {
-        absorb: { speed: 2 },
-        bounce: { horizontal: { value: 1 }, vertical: { value: 1 } },
-        enable: false,
-        maxSpeed: 50,
-        mode: "bounce",
-        overlap: { enable: false, retries: 0 },
-      },
-      color: {
-        value: "#ff0000",
-        animation: {
-          h: {
-            count: 0,
-            enable: false,
-            speed: 20,
-            decay: 0,
-            delay: 0,
-            sync: true,
-            offset: 0,
-          },
-          s: {
-            count: 0,
-            enable: false,
-            speed: 1,
-            decay: 0,
-            delay: 0,
-            sync: true,
-            offset: 0,
-          },
-          l: {
-            count: 0,
-            enable: false,
-            speed: 1,
-            decay: 0,
-            delay: 0,
-            sync: true,
-            offset: 0,
-          },
-        },
-      },
-      effect: { close: false, fill: false, options: {}, type: [] },
-      groups: {},
-      move: {
-        angle: { offset: 0, value: 90 },
-        attract: { distance: 200, enable: false, rotate: { x: 3000, y: 3000 } },
-        center: { x: 50, y: 50, mode: "percent", radius: 0 },
-        decay: 0,
-        distance: {},
-        direction: "none",
-        drift: 0,
-        enable: false,
-        gravity: {
-          acceleration: 9.81,
-          enable: false,
-          inverse: false,
-          maxSpeed: 50,
-        },
-        path: { clamp: true, delay: { value: 0 }, enable: false, options: {} },
-        outModes: { default: "out" },
-        random: false,
-        size: false,
-        speed: 1,
-        spin: { acceleration: 0, enable: false },
-        straight: false,
-        trail: { enable: false, length: 1, fill: {} },
-        vibrate: false,
-        warp: false,
-      },
-      number: {
-        density: { enable: true, density_auto: false, width: window.innerWidth * 1.5, height: window.innerHeight * 1.5 },
-        limit: { mode: "delete", value: 0 },
-        value: 20,
-      },
-      opacity: {
-        value: 1,
-        animation: {
-          count: 0,
-          enable: false,
-          speed: 2,
-          decay: 0,
-          delay: 0,
-          sync: false,
-          mode: "auto",
-          startValue: "random",
-          destroy: "none",
-        },
-      },
-      reduceDuplicates: false,
-      shadow: {
-        blur: 0,
-        color: { value: "#000" },
-        enable: false,
-        offset: { x: 0, y: 0 },
-      },
-      shape: {
-        type: "image",
-        options: {
-          image: [
-            {
-              src: "images/mob/Cruce.svg",
-              width: 30,
-              height: 30,
-              density: 50,
-            },
-            {
-              src: "images/mob/CruceMulti.svg",
-              width: 30,
-              height: 30,
-              density: 30,
-            },
-          ],
-        },
-      },
-      size: {
-        value: { min: 10, max: 20 },
-        animation: {
-          count: 0,
-          enable: false,
-          speed: 5,
-          decay: 0,
-          delay: 0,
-          sync: false,
-          mode: "auto",
-          startValue: "random",
-          destroy: "none",
-        },
-      },
-      stroke: { width: 0 },
-      zIndex: { value: 0, opacityRate: 1, sizeRate: 1, velocityRate: 1 },
-      destroy: {
-        bounds: {},
-        mode: "none",
-        split: {
-          count: 1,
-          factor: { value: 3 },
-          rate: { value: { min: 4, max: 9 } },
-          sizeOffset: true,
-        },
-      },
-      roll: {
-        darken: { enable: false, value: 0 },
-        enable: false,
-        enlighten: { enable: false, value: 0 },
-        mode: "vertical",
-        speed: 25,
-      },
-      tilt: {
-        value: 0,
-        animation: { enable: false, speed: 0, decay: 0, sync: false },
-        direction: "clockwise",
-        enable: false,
-      },
-      twinkle: {
-        lines: { enable: false, frequency: 0.05, opacity: 1 },
-        particles: { enable: false, frequency: 0.05, opacity: 1 },
-      },
-      wobble: { distance: 5, enable: false, speed: { angle: 50, move: 10 } },
-      life: {
-        count: 0,
-        delay: { value: 0, sync: false },
-        duration: { value: 0, sync: false },
-      },
-      rotate: {
-        value: 0,
-        animation: { enable: false, speed: 3, decay: 0, sync: false },
-        direction: "clockwise",
-        path: false,
-      },
-      orbit: {
-        animation: {
-          count: 0,
-          enable: false,
-          speed: 1,
-          decay: 0,
-          delay: 0,
-          sync: false,
-        },
-        enable: false,
-        opacity: 1,
-        rotation: { value: 45 },
-        width: 1,
-      },
-      links: {
-        blink: false,
-        color: { value: "#ffffff" },
-        consent: false,
-        distance: 150,
-        enable: false,
-        frequency: 1,
-        opacity: 0.4,
-        shadow: { blur: 5, color: { value: "#000" }, enable: false },
-        triangles: { enable: false, frequency: 1 },
-        width: 1,
-        warp: false,
-      },
-      repulse: {
-        value: 0,
-        enabled: false,
-        distance: 1,
-        duration: 1,
-        factor: 1,
-        speed: 1,
-      },
-    },
-    pauseOnBlur: true,
-    pauseOnOutsideViewport: true,
-    responsive: [
-      {
-        maxWidth: 576,
-        options: {
-          number: {
-            density: { enable: true, density_auto: true,},
-            limit: { mode: "delete", value: 0 },
-            value: 20,
-          },
+/*Card animation*/
+{
+    for (const el of document.querySelectorAll(".card-el")) {
+        el.addEventListener("mouseenter", (e) => {
+            if(e.target.querySelector(".card_info").classList.contains("card-close")){
+                e.target.querySelector(".card_info").classList.toggle("card-close");
+            }
+            e.target.querySelector(".card_info").classList.toggle("card-open");
+        });
+    
+        el.addEventListener("mouseleave", (e) => {
+            if(e.target.querySelector(".card_info").classList.contains("card-open")){
+                e.target.querySelector(".card_info").classList.toggle("card-open");
+            }
+            e.target.querySelector(".card_info").classList.toggle("card-close");
+        });
+    }
+}
+
+//Set max width to variable css
+{
+    document.querySelector("html").style.setProperty("--max-size", document.documentElement.clientWidth + "px");
+    window.addEventListener("resize", () => {
+        document.querySelector("html").style.setProperty("--max-size", document.documentElement.clientWidth + "px");
+        if(document.documentElement.clientWidth < 1250){
+            document.querySelector(".site-burger_menu").style.display = "block";
+            document.querySelector(".fix-nav").style.display = "none";
+        }else{
+            document.querySelector(".site-burger_menu").style.display = "none";
+            document.querySelector(".fix-nav").style.display = "grid";
         }
-      }
-    ],
-    smooth: false,
-    style: {},
-    themes: [],
-    zLayers: 100,
-    name: "Basic",
-    motion: { disable: false, reduce: { factor: 4, value: true } },
-  },
-});
+    });
+}
+
+/*Sroll \ Nav \ Ranges*/
+{
+    let ranges = document.querySelector(".page2-ranges");
+    let cont = 0;
+    document.addEventListener("scroll", () => {
+        /*Ranges animation*/
+        if(ranges.getBoundingClientRect().top > 0 && ranges.getBoundingClientRect().top < document.documentElement.scrollTop && cont < 1){
+            cont = 1;
+            circleAnimation();
+        } else if(cont < 1){
+            circle();
+        }
+    });
+
+    function circleAnimation() {
+        var canvases = document.getElementsByClassName("circle_canvas");
+        var progressValues = [];
+
+        function drawProgressBar(canvas, percent) {
+            var context = canvas.getContext("2d");
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.5 * Math.PI;
+            var endAngle = ((percent / 100) * 2 - 0.5) * Math.PI;
+            var counterClockwise = false;
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            context.shadowBlur = 10;
+            context.shadowColor = "rgba(0, 0, 0, 0.3)";
+
+            context.beginPath();
+            context.arc(x, y, radius, 0, 2 * Math.PI);
+            context.lineWidth = 10;
+            if(percent < 100){
+                context.strokeStyle = "#E0E0E0";
+            } else {
+                context.strokeStyle = "#00BFFF";
+            }
+            context.stroke();
+
+            context.shadowBlur = 6;
+            context.shadowColor = "rgba(0, 0, 0, 0.5)";
+
+            context.beginPath();
+            context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+            context.lineWidth = 10;
+            context.strokeStyle = "#00BFFF";
+            context.stroke();
+
+            context.shadowBlur = 0;
+            context.shadowColor = "rgba(0, 0, 0, 0.5)";
+
+            context.font = "30px sans-serif";
+            context.fillStyle = "#000000";
+            context.textAlign = "center";
+            context.fillText(percent + "%", x, y + 10);
+
+        }
+
+        function updateProgressBar(canvas, currentPercent) {
+            if (currentPercent <= 100 || progressValues.includes(canvas)) {
+                drawProgressBar(canvas, currentPercent);
+                if (currentPercent < 100) {
+                    currentPercent++;
+                }
+                if (currentPercent === 100) {
+                    progressValues.push(canvas);
+                }
+                setTimeout(function() {
+                    updateProgressBar(canvas, currentPercent);
+                }, 1);
+            }
+        }
+
+        for (var i = 0; i < canvases.length; i++) {
+            var canvas = canvases[i];
+            var initialPercent = 0;
+            updateProgressBar(canvas, initialPercent);
+        }
+    }
+
+    function circle() {
+        var canvases = document.getElementsByClassName("circle_canvas");
+
+        function drawProgressBar(canvas, percent) {
+            var context = canvas.getContext("2d");
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Line
+            context.beginPath();
+            context.arc(x, y, radius, 0, 2 * Math.PI);
+            context.lineWidth = 10;
+            context.strokeStyle = "#E0E0E0";
+            context.stroke();
+
+            // Procent text
+            context.font = "30px sans-serif";
+            context.fillStyle = "#000000";
+            context.textAlign = "center";
+            context.fillText("0%", x, y + 10);
+        }
+
+        function updateProgressBar(canvas, currentPercent) {
+            drawProgressBar(canvas, currentPercent);
+        }
+
+        for (var i = 0; i < canvases.length; i++) {
+            var canvas = canvases[i];
+            var initialPercent = 0;
+            updateProgressBar(canvas, initialPercent);
+        }
+    }
+
+    window.addEventListener('beforeunload', () => {
+        /*
+        localStorage.setItem('scrollPosition', window.scrollY);
+        */
+        document.querySelector("html").style.setProperty("--max-size", document.documentElement.clientWidth + "px");
+    });
+  
+    window.addEventListener('load', () => {
+        document.querySelector("html").style.setProperty("--max-size", document.documentElement.clientWidth + "px");
+
+        if(document.documentElement.clientWidth < 1250){
+            document.querySelector(".site-burger_menu").style.display = "block";
+            document.querySelector(".fix-nav").style.display = "none";
+        } else{
+            document.querySelector(".site-burger_menu").style.display = "none";
+            document.querySelector(".fix-nav").style.display = "grid";
+        }
+
+        /*
+        const savedScrollPosition = localStorage.getItem('scrollPosition');
+        if (savedScrollPosition) {
+            window.scrollTo(0, savedScrollPosition);
+            localStorage.removeItem('scrollPosition');
+        }
+        */
+
+        /*Ranges animation*/
+        if(ranges.getBoundingClientRect().top > 0 && ranges.getBoundingClientRect().top < document.documentElement.scrollTop && cont < 1){
+            cont = 1;
+            circleAnimation();
+        } else if(cont < 1){
+            circle();
+        }
+    });
+}
+
+/*Messages*/
+{
+    (function messageAnim() {
+        let nxt = ["ms2", "ms3"];
+
+        let intervalMessages = setInterval(() => {
+            if(document.documentElement.clientWidth < 1250){
+                clearInterval(intervalMessages);
+            }
+            if(nxt.length === 0){
+                nxt = ["ms1", "ms2", "ms3"];
+            }
+            let active = document.querySelector(".message-active");
+            let nextEl = document.querySelector("#" + nxt.shift());
+
+            active?.classList?.add("previos-activeRe");
+            nextEl?.classList?.add("new-activeRe");
+            nextEl?.classList?.remove("desactive");
+
+            active.addEventListener("animationend", () => {
+                active?.classList?.toggle("desactive");
+                active?.classList?.remove("previos-activeRe");
+                active?.classList?.remove("message-active");
+                active = "";
+            });
+
+            nextEl.addEventListener("animationend", () => {
+                nextEl?.classList?.toggle("message-active");
+                nextEl?.classList?.remove("new-activeRe");
+                nextEl = "";
+            });
+        }, 3500);
+    })();
+}
+
+/*Contact*/
+{
+    let close = document.querySelector(".contact-close_butt");
+    let contacts_buttons = document.querySelectorAll(".contact");
+
+    close.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+        document.querySelector(".contact-container").classList.remove("contact-opened");
+        document.querySelector(".contact-container").classList.add("contact-closed");
+    });
+
+    let thank_close = document.querySelector(".thankyou-close_butt");
+    thank_close.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+        document.querySelector(".thankyou-cont").style.display = "none";
+    });
+
+    let form_contact = document.querySelector(".contact-form");
+    form_contact.addEventListener("submit", () => {
+        document.querySelector(".thankyou-cont").style.display = "flex";
+    })
+
+    let seconds = new Date().getSeconds(), seconds2;
+    let mlseconds = new Date().getMilliseconds(), mlseconds2;
+    for (const iterator of contacts_buttons) {
+        iterator.addEventListener("pointerdown", (e) => {
+            e.preventDefault();
+            seconds = new Date().getSeconds();
+            mlseconds = new Date().getMilliseconds();
+        });
+
+        iterator.addEventListener("pointerup", (e) => {
+            e.preventDefault();
+            seconds2 = new Date().getSeconds();
+            mlseconds2 = new Date().getMilliseconds();
+
+            if(mlseconds + 180 > mlseconds2 && seconds >= seconds2){
+                document.querySelector(".contact-container").classList.remove("contact-closed");
+                document.querySelector(".contact-container").classList.add("contact-opened");
+            }
+        });
+    }
+}
+
+/*Menu burger*/
+{
+    var burger = document.querySelector('.burger-container'),
+    header = document.querySelector('.site-burger_menu');
+    
+    burger.addEventListener("pointerdown", () => {
+        header.classList.toggle("menu-opened");
+    });
+}
 
 
-tsParticles.load({
-  id: "tsparticlesBig",
-  options: {
-    autoPlay: true,
-    background: {
-      color: { value: "#fff" },
-      image: "",
-      position: "",
-      repeat: "",
-      size: "",
-      opacity: 0,
-    },
-    backgroundMask: {
-      composite: "destination-out",
-      cover: { color: { value: "#fff" }, opacity: 1 },
-      enable: false,
-    },
-    clear: true,
-    defaultThemes: {},
-    delay: 0,
-    fullScreen: { enable: false, zIndex: 0 },
-    detectRetina: false,
-    duration: 0,
-    fpsLimit: 120,
-    interactivity: {
-      detectsOn: "window",
-      events: {
-        onClick: { enable: false, mode: "push" },
-        onDiv: { selectors: [], enable: false, mode: [], type: "circle" },
-        onHover: {
-          enable: false,
-          mode: "repulse",
-          parallax: { enable: false, force: 2, smooth: 10 },
-        },
-        resize: { delay: 0.5, enable: false },
-      },
-      modes: {
-        trail: { delay: 1, pauseOnStop: false, quantity: 1 },
-        attract: {
-          distance: 200,
-          duration: 0.4,
-          easing: "ease-out-quad",
-          factor: 1,
-          maxSpeed: 50,
-          speed: 1,
-        },
-        bounce: { distance: 200 },
-        bubble: { distance: 200, duration: 0.4, mix: false },
-        connect: { distance: 80, links: { opacity: 0.5 }, radius: 60 },
-        grab: {
-          distance: 100,
-          links: { blink: false, consent: false, opacity: 1 },
-        },
-        push: { default: false, groups: [], quantity: 4 },
-        remove: { quantity: 2 },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-          factor: 100,
-          speed: 1,
-          maxSpeed: 50,
-          easing: "ease-out-quad",
-          divs: {
-            distance: 200,
-            duration: 0.4,
-            factor: 100,
-            speed: 1,
-            maxSpeed: 50,
-            easing: "ease-out-quad",
-            selectors: [],
-          },
-        },
-        slow: { factor: 3, radius: 200 },
-        light: {
-          area: {
-            gradient: {
-              start: { value: "#ffffff" },
-              stop: { value: "#000000" },
-            },
-            radius: 1000,
-          },
-          shadow: { color: { value: "#000000" }, length: 2000 },
-        },
-      },
-    },
-    manualParticles: [],
-    particles: {
-      bounce: { horizontal: { value: 1 }, vertical: { value: 1 } },
-      collisions: {
-        absorb: { speed: 2 },
-        bounce: { horizontal: { value: 1 }, vertical: { value: 1 } },
-        enable: false,
-        maxSpeed: 50,
-        mode: "bounce",
-        overlap: { enable: false, retries: 0 },
-      },
-      color: {
-        value: "#ff0000",
-        animation: {
-          h: {
-            count: 0,
-            enable: false,
-            speed: 20,
-            decay: 0,
-            delay: 0,
-            sync: true,
-            offset: 0,
-          },
-          s: {
-            count: 0,
-            enable: false,
-            speed: 1,
-            decay: 0,
-            delay: 0,
-            sync: true,
-            offset: 0,
-          },
-          l: {
-            count: 0,
-            enable: false,
-            speed: 1,
-            decay: 0,
-            delay: 0,
-            sync: true,
-            offset: 0,
-          },
-        },
-      },
-      effect: { close: false, fill: false, options: {}, type: [] },
-      groups: {},
-      move: {
-        angle: { offset: 0, value: 90 },
-        attract: { distance: 200, enable: false, rotate: { x: 3000, y: 3000 } },
-        center: { x: 50, y: 50, mode: "percent", radius: 0 },
-        decay: 0,
-        distance: {},
-        direction: "none",
-        drift: 0,
-        enable: false,
-        gravity: {
-          acceleration: 9.81,
-          enable: false,
-          inverse: false,
-          maxSpeed: 50,
-        },
-        path: { clamp: true, delay: { value: 0 }, enable: false, options: {} },
-        outModes: { default: "out" },
-        random: false,
-        size: false,
-        speed: 1,
-        spin: { acceleration: 0, enable: false },
-        straight: false,
-        trail: { enable: false, length: 1, fill: {} },
-        vibrate: false,
-        warp: false,
-      },
-      number: {
-        density: { enable: true, density_auto: false, width: window.innerWidth * 1.8, height: window.innerHeight * 1.8},
-        limit: { mode: "delete", value: 0 },
-        value: 10,
-      },
-      opacity: {
-        value: 1,
-        animation: {
-          count: 0,
-          enable: false,
-          speed: 2,
-          decay: 0,
-          delay: 0,
-          sync: false,
-          mode: "auto",
-          startValue: "random",
-          destroy: "none",
-        },
-      },
-      reduceDuplicates: false,
-      shadow: {
-        blur: 0,
-        color: { value: "#000" },
-        enable: false,
-        offset: { x: 0, y: 0 },
-      },
-      shape: {
-        type: "image",
-        options: {
-          image: [
-            {
-              src: "images/mob/printB.svg",
-              width: 10,
-              height: 10,
-              density: 0,
-            },
-            {
-              src: "images/mob/printBk.svg",
-              width: 10,
-              height: 10,
-              density: 1
-            },
-          ],
-        },
-      },
-      size: {
-        value: { min: 80, max: 120 },
-        animation: {
-          count: 0,
-          enable: false,
-          speed: 5,
-          decay: 0,
-          delay: 0,
-          sync: false,
-          mode: "auto",
-          startValue: "random",
-          destroy: "none",
-        },
-      },
-      stroke: { width: 0 },
-      zIndex: { value: 0, opacityRate: 1, sizeRate: 1, velocityRate: 1 },
-      destroy: {
-        bounds: {},
-        mode: "none",
-        split: {
-          count: 1,
-          factor: { value: 3 },
-          rate: { value: { min: 4, max: 9 } },
-          sizeOffset: true,
-        },
-      },
-      roll: {
-        darken: { enable: false, value: 0 },
-        enable: false,
-        enlighten: { enable: false, value: 0 },
-        mode: "vertical",
-        speed: 25,
-      },
-      tilt: {
-        value: 0,
-        animation: { enable: false, speed: 0, decay: 0, sync: false },
-        direction: "clockwise",
-        enable: false,
-      },
-      twinkle: {
-        lines: { enable: false, frequency: 0.05, opacity: 1 },
-        particles: { enable: false, frequency: 0.05, opacity: 1 },
-      },
-      wobble: { distance: 5, enable: false, speed: { angle: 50, move: 10 } },
-      life: {
-        count: 0,
-        delay: { value: 0, sync: false },
-        duration: { value: 0, sync: false },
-      },
-      rotate: {
-        value: 0,
-        animation: { enable: false, speed: 3, decay: 0, sync: false },
-        direction: "clockwise",
-        path: false,
-      },
-      orbit: {
-        animation: {
-          count: 0,
-          enable: false,
-          speed: 1,
-          decay: 0,
-          delay: 0,
-          sync: false,
-        },
-        enable: false,
-        opacity: 1,
-        rotation: { value: 45 },
-        width: 1,
-      },
-      links: {
-        blink: false,
-        color: { value: "#ffffff" },
-        consent: false,
-        distance: 150,
-        enable: false,
-        frequency: 1,
-        opacity: 0.4,
-        shadow: { blur: 5, color: { value: "#000" }, enable: false },
-        triangles: { enable: false, frequency: 1 },
-        width: 1,
-        warp: false,
-      },
-      repulse: {
-        value: 0,
-        enabled: false,
-        distance: 1,
-        duration: 1,
-        factor: 1,
-        speed: 1,
-      },
-    },
-    pauseOnBlur: true,
-    pauseOnOutsideViewport: true,
-    responsive: [
-      {
-        maxWidth: 576,
-        options: {
-          number: {
-            density: { enable: true, density_auto: false,},
-            limit: { mode: "delete", value: 10 },
-            value: 10,
-          },
-          shape: {
-            type: "image",
-            options: {
-              image: [
-                {
-                  src: "images/mob/printB.svg",
-                  width: 10,
-                  height: 10,
-                  density: 0,
-                },
-                {
-                  src: "images/mob/printBk.svg",
-                  width: 10,
-                  height: 10,
-                  density: 1
-                },
-              ],
-            },
-          },
-          size: {
-            value: { min: 60, max: 120 },
-            animation: {
-              count: 0,
-              enable: false,
-              speed: 5,
-              decay: 0,
-              delay: 0,
-              sync: false,
-              mode: "auto",
-              startValue: "random",
-              destroy: "none",
-            },
-          },
-        }
-      }
-    ],
-    smooth: false,
-    style: {},
-    themes: [],
-    zLayers: 100,
-    name: "Basic",
-    motion: { disable: false, reduce: { factor: 4, value: true } },
-  },
-});
+
