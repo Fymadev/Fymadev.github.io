@@ -161,6 +161,7 @@ li:hover, a:hover:not(.btn) {
 /* Header Styles */
 .header_container {
     min-height: calc(100vh - 60px);
+    max-height: 1400px;
 
     background:
         url('./../images/bg/wheel.png') no-repeat center top,
@@ -701,3 +702,4 @@ li:hover, a:hover:not(.btn) {
 ._delay_3 { transition-delay: 0.3s; }
 ._delay_4 { transition-delay: 0.4s; }
 ._delay_5 { transition-delay: 0.5s; }
+
