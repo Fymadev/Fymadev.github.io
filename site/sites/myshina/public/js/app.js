@@ -1,0 +1,111 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var linksToClose = document.querySelectorAll('.js-offcanvas-link');
+    var offcanvasElement = document.getElementById('mobileMenu');
+    linksToClose.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            var targetUrl = this.getAttribute('href');
+            var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
+            offcanvas.hide();
+            setTimeout(function () {
+                window.location.href = targetUrl;
+            }, 300);
+        });
+    });
+});
+
+// Animations
+document.addEventListener('DOMContentLoaded', () => {
+    const elementsToObserve = [];
+
+    // --- Servicii ---
+    const sectionTitles = document.querySelectorAll('.section_title, .section_subtitle');
+    sectionTitles.forEach(el => {
+        el.classList.add('_animate', '_fade_down');
+        elementsToObserve.push(el);
+    });
+
+    const centralPanel = document.querySelector('.row.justify-content-center.mb-5');
+    if (centralPanel) {
+        centralPanel.classList.add('_animate', '_fade_up');
+        elementsToObserve.push(centralPanel);
+    }
+
+    const serviceCards = document.querySelectorAll('.row.g-4 .col-lg-4');
+    serviceCards.forEach((card, index) => {
+        card.classList.add('_animate', '_fade_up');
+        card.classList.add(`_delay_${index % 6}`);
+        elementsToObserve.push(card);
+    });
+
+    // --- Contact ---
+    const contactTitles = document.querySelector('#contacte .row.text-center');
+    if (contactTitles) {
+        contactTitles.classList.add('_animate', '_fade_down');
+        elementsToObserve.push(contactTitles);
+    }
+
+    const contactInfoRow = document.querySelector('#contacte .row.mb-5');
+    if (contactInfoRow) {
+        contactInfoRow.classList.add('_animate', '_fade_up', '_delay_1');
+        elementsToObserve.push(contactInfoRow);
+    }
+
+    const formContainer = document.querySelector('#contacte .col-lg-8 form');
+    if (formContainer) {
+        formContainer.classList.add('_animate', '_fade_up', '_delay_2');
+        elementsToObserve.push(formContainer);
+    }
+
+    // --- About Section ---
+    const aboutTitles = document.querySelectorAll('#despre .about_title');
+    aboutTitles.forEach(el => {
+        el.classList.add('_animate', '_fade_down');
+        elementsToObserve.push(el);
+    });
+
+    const aboutTexts = document.querySelectorAll('#despre .about_text');
+    aboutTexts.forEach((el, idx) => {
+        el.classList.add('_animate', '_fade_up', `_delay_${idx % 2}`);
+        elementsToObserve.push(el);
+    });
+
+    const aboutImages = document.querySelectorAll('#despre .about_image_cont');
+    aboutImages.forEach((el, idx) => {
+        el.classList.add('_animate', '_fade_up', `_delay_${idx % 2}`);
+        elementsToObserve.push(el);
+    });
+
+    // --- Footer ---
+    const footerSubtitle = document.querySelector('.footer_subtitle');
+    if (footerSubtitle) {
+        footerSubtitle.classList.add('_animate', '_fade_down');
+        elementsToObserve.push(footerSubtitle);
+    }
+
+    const footerContacts = document.querySelectorAll('.footer_copyright, .caladea');
+    footerContacts.forEach(el => {
+        el.classList.add('_animate', '_fade_up');
+        elementsToObserve.push(el);
+    });
+
+    // Intersection Observer unic
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('_is_visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
+    });
+});

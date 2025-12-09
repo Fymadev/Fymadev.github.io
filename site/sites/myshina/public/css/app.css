@@ -1,0 +1,744 @@
+/* Fonts */
+/*
+
+- Akronim
+- Akshar — variante de greutate: 300–700
+- Alata
+- Bacasime Antique
+- Big Shoulders Stencil — parametri opsz (10..72) și greutăți (100..900)
+- Caladea — stiluri: normal și italic; greutăți: 400, 700
+- Offside
+
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Akshar:wght@300..700&family=Alata&family=Bacasime+Antique&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Offside&display=swap'); */
+
+
+/* Font Faces */
+
+@font-face {
+    font-family: 'Akronim';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('./../fonts/Akronim/Akronim-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./../fonts/Akshar/Akshar-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('./../fonts/Alata/Alata-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Bacasime Antique';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('./../fonts/Bacasime_Antique/BacasimeAntique-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Big Shoulders Stencil';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./../fonts/Big_Shoulders_Stencil/BigShouldersStencil-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Caladea';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('./../fonts/Caladea/Caladea-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Offside';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('./../fonts/Offside/Offside-Regular.ttf') format('truetype'); 
+}
+
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Nav links */
+.nav-link {
+    font-family: "Offside", cursive;
+}
+
+a, li {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+li:hover, a:hover:not(.btn) {
+    opacity: 0.7;
+}
+
+/* Burger menu */
+.burger_menu {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.burger_menu::before,
+.burger_menu::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    left: 0;
+}
+
+.burger_menu::after {
+    bottom: -10px;
+}
+
+.burger_menu::before {
+    top: -10px;
+}
+
+.navbar-toggler {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+/* Font awesome icons */
+.fas {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    width: calc(10px + .6vw);
+    height: calc(10px + .6vw);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fa-2x {
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 50px;
+    max-height: 50px;
+    width: calc(15px + .6vw);
+    height: calc(15px + .6vw);
+}
+
+.fa-lg {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 60px;
+    max-height: 60px;
+    width: calc(20px + .6vw);
+    height: calc(20px + .6vw);
+}
+
+.fa-dark {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.fa-phone {
+    background-image: url(./../images/icons/phone.svg);
+}
+
+.fa-viber {
+    background-image: url(./../images/icons/viber.svg);
+}
+
+.fa-whatsapp {
+    background-image: url(./../images/icons/whatsapp.svg);
+}
+
+.fa-arrow-down {
+    background-image: url(./../images/icons/arrow-down.svg);
+}
+
+.fa-facebook {
+    background-image: url(./../images/icons/facebook.svg);
+}
+
+.fa-globe {
+    background-image: url(./../images/icons/globe.svg);
+}
+
+.fa-map {
+    background-image: url(./../images/icons/map.svg);
+}
+
+/* Header Styles */
+.header_container {
+    min-height: calc(100vh - 60px);
+    max-height: 1400px;
+
+    background:
+        url('./../images/bg/wheel.png') no-repeat center top,
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 30%,
+            rgba(0, 0, 0, 0.44) 40%,
+            rgba(0, 0, 0, 1) 65%),
+        url('./../images/bg/bg-textured-mini.webp');
+    background-size: calc(170% - 80vw - (20% - 30vw)), cover, cover;
+    background-repeat: no-repeat;
+    background-position: 50% calc(25% - 9vw - 1vh), center, center;
+
+    padding-top: 250px;
+}
+
+.header_title {
+    font-family: "Akshar", cursive;
+    font-size: clamp(70px, 16vw, 220px);
+    text-shadow: -3px -3px 0px #ffffff, 0px -3px 0px #ffffff, -3px 0px 0px #ffffff, 3px 0px 0px #ffffff, 0px 3px 0px #ffffff, 3px 3px 0px #ffffff, -3px 3px 0px #ffffff, 3px -3px 0px #ffffff;
+    filter: drop-shadow(13px 15px 10.5px #0b0b0b);
+    color: #C74F00;
+
+    line-height: 60%;
+    text-wrap-mode: nowrap;
+}
+
+.header_subtitle {
+    font-family: 'Alata', sans-serif;
+    font-size: clamp(32px, 10vw, 96px);
+    line-height: 60%;
+    text-wrap-mode: nowrap;
+}
+
+.header_btn {
+    font-family: 'Big Shoulders Stencil', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.46);
+
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    filter: drop-shadow(13px 27px 10.5px #0B0B0B);
+
+    max-width: calc(450px + 6vw);
+    padding: 10px 70px;
+    margin-top: calc(25px + 3vw);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    filter: drop-shadow(0px -32px 53.8px rgba(239, 239, 239, 0.1));
+}
+
+.header_btn :nth-child(1) {
+    font-weight: normal;
+    font-size: clamp(30px, 12vw, 68px);
+    line-height: 70%;
+    text-wrap-mode: nowrap;
+}
+
+.header_btn :nth-child(2) {
+    font-weight: normal;
+    font-size: clamp(22px, 8vw, 40px);
+    line-height: 70%;
+    text-wrap-mode: nowrap;
+}
+
+.header_more {
+    display: none;
+    text-decoration: none;
+    color: #ffffff;
+
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(80px + 2vw);
+}
+
+@media (min-height: 690px) and (max-width: 767px) {
+    .header_more {
+        display: flex;
+    }
+}
+
+@media (min-height: 940px) {
+    .header_more {
+        display: flex;
+    }
+}
+
+.header_more_text {
+    font-family: 'Offside', serif;
+    font-size: clamp(18px, 2.5vw, 32px);
+    text-wrap-mode: nowrap;
+    text-shadow: 1px 1px 2px #000000;
+    line-height: 40%;
+    text-decoration: none;
+}
+
+
+
+/* General Section Styles */
+.section_title {
+    font-family: 'Akronim', cursive;
+    font-size: clamp(64px, 8vw, 130px);
+    /* text-shadow: -2px -2px 0px #ffffff, 0px -2px 0px #ffffff, -2px 0px 0px #ffffff, 2px 0px 0px #ffffff, 0px 2px 0px #ffffff, 2px 2px 0px #ffffff, -2px 2px 0px #ffffff, 2px -2px 0px #ffffff;
+    filter: drop-shadow(8px 10px 7px #0b0b0b); */
+    color: #ffffff;
+    /* color: #C74F00; */
+
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section_subtitle {
+    font-family: 'Bacasime Antique', sans-serif;
+    font-size: clamp(24px, 3vw, 40px);
+    color: #ffffff;
+    letter-spacing: 10%;
+
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* Services Styles */
+
+.service_title {
+    font-family: 'Alata', sans-serif;
+    font-size: clamp(30px, 3vw, 60px);
+    color: #ffffff;
+    line-height: 100%;
+    min-height: 80px;
+}
+
+.rounded_line {
+    height: 4px;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.service_text {
+    font-family: 'Caladea', serif;
+    font-size: clamp(18px, 1.6vw, 30px);
+    color: #000000;
+    background-color: #ffffff;
+    padding: 30px 10px 10px 10px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 140%;
+    min-height: 280px;
+    max-height: 500px;
+    height: fit-content;
+}
+
+.service_text_mobile {
+    font-size: clamp(24px, 2vw, 38px);
+}
+
+/* Service Icons Styles */
+.cicon {
+    display: block;
+    width: 100px;
+    height: 80px;
+
+    /* background-image: url(); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vmobile_icon {
+    background-image: url('./../images/service_icons/vmobile.png');
+}
+
+.storage_icon {
+    background-image: url('./../images/service_icons/storage.png');
+}
+
+.restab_icon {
+    background-image: url('./../images/service_icons/restab.png');
+}
+
+.repair_icon {
+    background-image: url('./../images/service_icons/repair.png');
+}
+
+.mente_icon {
+    background-image: url('./../images/service_icons/mente.png');
+}
+
+.instal_icon {
+    background-image: url('./../images/service_icons/instal.png');
+}
+
+.equil_icon {
+    background-image: url('./../images/service_icons/equil.png');
+}
+
+
+/* Contact Styles */
+.form-control {
+    font-family: 'Caladea', serif;
+    font-size: clamp(18px, 1.2vw, 28px);
+    min-height: 50px;
+}
+
+.contact_map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact_map_title {
+    font-family: 'Alata', sans-serif;
+    font-size: clamp(24px, 1.6vw, 48px);
+    color: #ffffff;
+
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 80%;
+}
+
+.contact_button {
+    font-family: 'Big Shoulders Stencil', sans-serif;
+    font-size: clamp(46px, 3.5vw, 40px);
+    line-height: 100%;
+    margin-top: 30px;
+}
+
+.contact_map_container {
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+    height: 90%;
+    overflow: hidden;
+}
+
+.contact_info {
+    font-family: 'Caladea', serif;
+    font-size: clamp(28px, 2vw, 42px);
+    color: #ffffff;
+}
+
+
+/* About Styles */
+.about_image_cont {
+    width: 100%;
+    min-height: 300px;
+    max-height: 700px;
+    height: calc(250px + 10vw);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about_image_cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_title {
+    font-family: 'Alata', sans-serif;
+    font-size: clamp(40px, 3vw, 80px);
+    color: #ffffff;
+    line-height: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+.about_text {
+    font-family: 'Caladea', serif;
+    font-size: clamp(18px, 1.2vw, 28px);
+    color: #ffffff;
+    line-height: 130%;
+}
+
+
+
+/* Footer Styles */
+.footer_subtitle {
+    font-family: 'Caladea', serif;
+    font-size: clamp(18px, 1.2vw, 28px);
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 130%;
+    max-width: 80%;
+    text-align: center;
+}
+
+.caladea {
+    font-family: 'Caladea', serif;
+}
+
+
+@media (min-width: 768px) {
+    .header_container {
+        background:
+            url('./../images/bg/wheel.png') no-repeat center top,
+            linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 20%,
+                rgba(0, 0, 0, 0.44) 30%,
+                rgba(0, 0, 0, 1) 55%),
+            url('./../images/bg/bg-textured.webp');
+        background-size: calc(170% - 90vw - (20% - 5vw)), cover, cover;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: 50% 0%, center, center;
+
+        padding-top: calc(200px + 5vw);
+    }
+
+    .header_title {
+        font-size: clamp(70px, 16vw, 220px);
+    }
+
+    .header_subtitle {
+        font-size: clamp(32px, 8vw, 96px);
+    }
+
+    .header_more_text {
+        line-height: calc(10% + 1vw);
+    }
+
+    /* Services Styles */
+    .service_title {
+        font-size: clamp(30px, 1vw, 60px);
+        min-height: 90px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .header_container {
+        background:
+            url('./../images/bg/wheel.png') no-repeat center top,
+            linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 20%,
+                rgba(0, 0, 0, 0.44) 34%,
+                rgba(0, 0, 0, 1) 55%),
+            url('./../images/bg/bg-textured.webp');
+        background-size: calc(170% - 90vw - (37% - 10vw)), cover, cover;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: 50% 0%, center, center;
+
+        padding-top: calc(200px + 5vw);
+    }
+
+    .header_title {
+        font-size: clamp(70px, 14vw, 260px);
+    }
+
+    .header_subtitle {
+        font-size: clamp(32px, 6vw, 110px);
+    }
+
+    .header_btn {
+        max-width: calc(450px + 6vw);
+        padding: calc(5px + .7vw) calc(60px + 4vw);
+        margin-top: calc(25px + 3vw);
+
+        gap: calc(5px + .5vw);
+
+        filter: drop-shadow(0px -32px 53.8px rgba(239, 239, 239, 0.1));
+    }
+
+    .header_btn :nth-child(1) {
+        font-size: clamp(30px, 12vw, 76px);
+    }
+
+    .header_btn :nth-child(2) {
+        font-size: clamp(22px, 8vw, 48px);
+    }
+
+
+    /* Services Styles */
+
+    .service_title {
+        font-size: clamp(30px, 1.8vw, 60px);
+        min-height: 90px;
+    }
+
+    .service_text {
+        font-size: clamp(18px, 1.2vw, 26px);
+        padding: 30px 10px 10px 10px;
+    }
+
+    .service_text_mobile {
+        font-size: clamp(24px, 1.8vw, 30px);
+    }
+
+    /* Service Icons Styles */
+    .vmobile_icon {
+        width: calc(120px + 1vw);
+        max-width: 150px;
+        height: 100px;
+    }
+}
+
+
+
+/* Animations */
+
+/* Navbar animations */
+.navbar .nav-link,
+.navbar .navbar-brand {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: navbarFadeIn 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.navbar .navbar-brand {
+    animation-delay: 0.15s;
+}
+
+.navbar .nav-link:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.navbar .nav-link:nth-child(2) {
+    animation-delay: 0.35s;
+}
+.navbar .nav-link:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.navbar .nav-link:nth-child(4) {
+    animation-delay: 0.65s;
+}
+/* Adaugă mai multe dacă ai mai multe linkuri */
+
+@keyframes navbarFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Header animations */
+.header_container {
+    opacity: 0;
+    animation: bgFadeIn 1.5s ease 0.2s 1 both;
+}
+
+@keyframes bgFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.header_title {
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.1s 1 both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header_subtitle {
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.3s 1 both;
+}
+
+.header_btn {
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.5s 1 both;
+}
+
+.header_more {
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.7s 1 both;
+}
+
+
+/* Services Animations */
+
+/* --------------------------------------------------- */
+/* 1. Setarea Bazei: Toate elementele animate încep invizibile */
+/* Adaugă această clasă pe elementele target (e.g., .section_title, .service_text) */
+._animate {
+    opacity: 0;
+    /* Tranziția se aplică pe toate mișcările */
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --------------------------------------------------- */
+/* 2. Definirea Direcțiilor și Stării inițiale (Deplasarea) */
+
+/* Apare de jos (Fade In Up) */
+._fade_up {
+    transform: translateY(50px);
+}
+
+/* Apare de sus (Fade In Down) */
+._fade_down {
+    transform: translateY(-30px);
+}
+
+/* --------------------------------------------------- */
+/* 3. Starea de Vizibilitate (Animația pornește) */
+
+._is_visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------- */
+/* 4. Decalaj (Delay) pentru Cardurile de Servicii (Opțional) */
+
+/* Aplicăm un delay pe carduri pentru un efect de "staggered" (apariție succesivă).
+  Va trebui să adaugi o clasă numerică pe fiecare card (ex: ._delay_0, ._delay_1, etc.)
+*/
+._delay_0 { transition-delay: 0.0s; }
+._delay_1 { transition-delay: 0.1s; }
+._delay_2 { transition-delay: 0.2s; }
+._delay_3 { transition-delay: 0.3s; }
+._delay_4 { transition-delay: 0.4s; }
+._delay_5 { transition-delay: 0.5s; }
